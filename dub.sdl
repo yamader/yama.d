@@ -1,0 +1,7 @@
+name "yamad"
+description "YamaD D standard library"
+homepage "https://github.com/yamader/yama.d"
+authors "YamaD"
+copyright "Copyright © 2022, YamaD"
+license "MIT"
+targetType "library"
