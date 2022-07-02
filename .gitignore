@@ -1,3 +1,5 @@
 .dub
+docs.json
+docs/
 yamad-test-*
 *.a

@@ -1,12 +1,19 @@
 module reflection;
 
-bool has(T)(const T self, string name) {
+/**
+ * Check if `self` has `name`.
+ */
+bool has(T)(const ref T self, string name) {
   static foreach (s; [__traits(derivedMembers, T)])
     if (s == name)
       return true;
   return false;
 }
 
+/**
+ * Assign `val` to `self.name`.
+ * Throws: Exception on failure.
+ */
 void set(T, U)(ref T self, string name, const U val) {
   static foreach (s; [__traits(derivedMembers, T)])
     if (s == name) {
